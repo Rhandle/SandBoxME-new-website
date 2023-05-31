@@ -1,0 +1,170 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" , initial-scale="1.0">
+    <title>Welcome to Sandbox Middle East!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="assets\images\logos\sandbox-logo-thumbnail.png">
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="nav-check">
+        <div class="nav-btn">
+            <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+        </div>
+        <ul>
+            <li><a href="index.html" id="active">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li></li> <!-- this is a placeholder for the logo -->
+            <li><a href="products.html">Products & Services</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+        <div class="logo-circle">
+            <img src="assets/images/logos/SandBox-Logo.png" alt="sandbox-logo">
+        </div>
+    </nav>
+
+
+
+
+    <div class="header">
+        <video autoplay muted loop plays-inline>
+            <source src="assets/videos/globespin.mp4" type="video/mp4">
+        </video>
+        <div class="header-content">
+            <h1>GREAT PRODUCTS<br>GLOBAL DISTRIBUTION</h1>
+            <p>EXPAND YOUR REACH ACROSS CONTINENTS AND CULTURES</p>
+        </div>
+    </div>
+
+    <main>
+        <h1 class="index-header">Why Sandbox?</h1>
+
+        <div class="main-container">
+            <div class="left-content-container">
+                <p>SandBox is the largest Filipino owned importer and distributor of food and grocery products in the Middle
+                    East. We are also the marketing and distribution partner of PLDT Global for our proprietary BayaDIRECT
+                    services.</p>
+                    <br>
+                <p>For sub-distributors and retail outlets, we offer outstanding food products and grocery items that have
+                    universal appeal, as well as bills payment services for Filipino expats.</p>
+                    <br>
+                <p>For manufacturers, we offer instant global reach through our widespread international sales network.</p>
+                
+                <div class="index-shortquote" id="index-sq-desktop">
+                    <h1>With Sandbox,</h1>
+                        <h3>there are no borders to<br>your business growth.</h3>
+                        <br>
+                        <a href="about.html">About Us</a>
+                </div>
+            </div>
+            <div class="right-content-container">
+                <img id="index-img" src="assets\images\home-image.png">
+            </div>
+            <div class="index-shortquote" id="index-sq-mobile">
+                <h1>With Sandbox,</h1>
+                    <h3>there are no borders to<br>your business growth.</h3>
+                    <br>
+                    <a href="about.html">About Us</a>
+            </div>
+        </div>
+
+    <div class="home-gallery-wrap">
+        <img src="assets\images\PhotoCollage\Chevron Left.svg" id="back">
+            <div class="home-gallery"><!-- following the tutorial: https://www.youtube.com/watch?v=gzXyRa7jwk4 -->
+            
+                <div>   
+                    <span><img src="assets\images\PhotoCollage\8672 1.png"></span>
+                    <span><img src="assets\images\PhotoCollage\Arce Ice Cream A 3.png"></span>
+                    <span><img src="assets\images\PhotoCollage\IMG_6206 1.png"></span>
+                </div>
+                <div>
+                    <span><img src="assets\images\PhotoCollage\09e43d9d8dd60b764e1dd84b3d0e6200 1.png"></span>
+                    <span><img src="assets\images\PhotoCollage\image 14.png"></span>
+                    <span><img src="assets\images\PhotoCollage\img_8884 1.png"></span>
+                </div>
+            </div>
+        <img src="assets\images\PhotoCollage\Chevron Right.svg" id="next">
+    </div>
+
+    <script>
+        let scrollContainer = document.querySelector('.home-gallery');
+        let scrollLeft = document.getElementById('back');
+        let scrollRight = document.getElementById('next');
+
+        scrollContainer.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            scrollContainer.scrollLeft += evt.deltaY;
+        });
+
+        scrollRight.addEventListener("click", () => {
+            scrollContainer.style.scrollBehavior = "smooth";
+            const scrollWidth = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+            if (scrollContainer.scrollLeft + scrollContainer.clientWidth >= scrollWidth) {
+                scrollContainer.scrollLeft = 0;
+            } else {
+                scrollContainer.scrollLeft += 1200;
+            }
+        });
+
+        scrollLeft.addEventListener("click", () => {
+            scrollContainer.style.scrollBehavior = "smooth";
+            if (scrollContainer.scrollLeft <= 0) {
+                scrollContainer.scrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+            } else {
+                scrollContainer.scrollLeft -= 1200;
+            }
+        });
+    </script>
+
+    <div class="product-range">
+        <h1>Our Product Range</h1>
+        <p>SandBox imports and distributes a wide range of food and grocery items sourced directly from manufacturers in
+            Southeast Asia and Southern Europe, from milk to cookies, from cleaning products to cooking oil - sharing
+            quality products and delicacies worldwide.</p>
+        <a href="products.html">View Products</a>
+    </div>
+
+</main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="left-footer-container">
+                <h1>Follow Us</h1> <!-- following the tutorial: https://codepen.io/candroo/pen/ozBEWY -->
+                <ul>
+                    <li><a href="https://www.facebook.com/Sandbox-Middle-East-LLC-100114908426818/"><img
+                                src="assets/images/icons/facebook-icon.svg" /></a></li>
+                    <li><a href=""><img src="assets/images/icons/whatsapp-icon.svg" /></a></li>
+                    <li><a href="https://www.instagram.com/sandboxme.ae/"><img
+                                src="assets/images/icons/instagram-icon.svg" /></a></li>
+                    <li><a href="https://www.linkedin.com/company/sandbox-middle-east/?originalSubdomain=ae"><img
+                                src="assets/images/icons/linkedin-icon.svg" style="height: 1.5em" /></a></li>
+                </ul>
+            </div>
+            <div class="right-footer-container">
+                <ul>
+                    <li><img src="assets/images/icons/location-icon.svg" />
+                        <p>Dubai Investments Park 1 , Unit 515 Arenco Building 4, Dubai , AE</p>
+                    </li>
+                    <li><img src="assets/images/icons/phone-icon.svg" />
+                        <p>+971 4 887 8747</p>
+                    </li>
+                    <li><img src="assets/images/icons/email-icon.svg" />
+                        <p>admin@sandboxme.ae</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright-container">
+            <p>&copy; 2023 Sandbox Middle East - All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
